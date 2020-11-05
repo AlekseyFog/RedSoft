@@ -20,8 +20,9 @@ export default {
     commit('MUTATE_SLOTS', slots);
   },
   LOAD_CART({ commit }) {
-    const cartList = localStorage.cart || [];
-    commit('MUTATE_CART', cartList);
+    const cartList = localStorage.cart || '';
+    const cart = cartList.split(',');
+    commit('MUTATE_CART', cart);
   },
   SET_FILTER_STRING({ commit }, filterString) {
     commit('MUTATE_FILTER_STRING', filterString);
@@ -37,6 +38,7 @@ export default {
         cartList.push(slotId);
       }
       commit('MUTATE_CART', cartList);
+      localStorage.cart = cartList;
     }
   },
 };

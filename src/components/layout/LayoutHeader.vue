@@ -75,7 +75,10 @@
     display: block;
   }
   .layout-header__menu-item:not(:last-child) {
-    margin-right: 48px;
+    margin-right: 48.5px;
+  }
+  .layout-header__menu-item:not(:first-child) {
+    margin-bottom: 4px;
   }
   .layout-header__menu-item:first-child {
     width: 48px;
@@ -84,6 +87,7 @@
     display: block;
     width: 100%;
     margin: 0;
+    color: $color-brown-01;
   }
   .layout-header__menu-item a {
     color: $color-black-02;

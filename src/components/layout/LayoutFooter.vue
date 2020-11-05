@@ -4,7 +4,7 @@
       <div class="layout-footer__menu">
         <div class="layout-footer__menu-item">
           <a href="#">
-            <logoImageFooter />
+            <logoImage />
           </a>
         </div>
         <div class="layout-footer__menu-item">
@@ -32,36 +32,45 @@
             О галерее
           </a>
         </div>
+        <div class="layout-footer__menu-item layout-footer__menu-item_phone">
+          <a href="tel:+74955555555">
+            <locationImage />
+            +7 (495) 555-55-55
+          </a>
+        </div>
+        <div class="layout-footer__menu-item layout-footer__menu-item_location">
+          <a href="#">
+            <phoneImage />
+            г. Москва, ул. Расплетина, 24
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import logoImage from "@/assets/svg/logo.svg";
+  import logoImage from '@/assets/svg/logo.svg';
+  import locationImage from '@/assets/svg/location.svg';
+  import phoneImage from '@/assets/svg/phone.svg';
 
   export default {
     name: 'LayoutFooter',
     components: {
       logoImage,
+      locationImage,
+      phoneImage,
     },
   };
 </script>
 
 <style lang="scss" scoped>
-  .layout-footer__wrapper {
-    display: block;
-    width: 1200px;
-    margin: 0 auto;
-  }
   .layout-footer {
     display: block;
     padding: 24px 0;
   }
   .layout-footer__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: block;
     width: 1200px;
     margin: 0 auto;
   }
@@ -69,7 +78,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: calc(100% - 416px);
   }
   .layout-footer__menu-item {
     display: block;
@@ -80,20 +88,33 @@
   .layout-footer__menu-item:first-child {
     width: 48px;
   }
-  .layout-footer__menu-item:first-child svg {
-    display: block;
-    width: 100%;
-    margin: 0;
-    background: #403432;
-  }
   .layout-footer__menu-item a {
-    color: $color-black-02;
+    color: $color-brown-04;
     text-decoration: none;
     font-size: 14px;
     line-height: 21px;
   }
-  .layout-footer__search {
+  .layout-footer__menu-item svg {
     display: block;
-    width: 416px;
+    width: 100%;
+    margin: 0;
+    color: $color-brown-01;
+  }
+  .layout-footer__menu-item_phone {
+    margin-left: auto;
+  }
+  .layout-footer__menu-item_phone svg {
+    display: inline-block;
+    vertical-align: middle;
+    color: $color-brown-04;
+    width: 14px;
+    margin-right: 10px;
+  }
+  .layout-footer__menu-item_location svg {
+    display: inline-block;
+    vertical-align: middle;
+    color: $color-brown-04;
+    width: 14px;
+    margin-right: 10px;
   }
 </style>

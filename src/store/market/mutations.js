@@ -4,7 +4,6 @@ export default {
   },
   MUTATE_CART: (state, cart) => {
     state.cart = cart;
-    localStorage.cart = cart;
   },
   MUTATE_FILTER_STRING: (state, filterString) => {
     state.filterString = filterString;

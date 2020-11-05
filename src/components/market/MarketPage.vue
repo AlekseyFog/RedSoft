@@ -71,6 +71,11 @@
     margin-bottom: 39px;
     margin-top: 45px;
   }
+  .market-page__title h1{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+  }
   .market-page__list {
     display: flex;
     flex-wrap: wrap;

@@ -35,9 +35,6 @@
       },
     },
     methods: {
-      setFocus() {
-        this.$refs.input.focus();
-      },
       eventHandler(eventName, $event) {
         this.$emit(eventName, $event);
       },
@@ -51,6 +48,8 @@
     width: 100%;
   }
   .re-input label {
+    font-size: 14px;
+    line-height: 21px;
     display: block;
     width: 100%;
   }
@@ -66,7 +65,6 @@
   }
   .re-input input::-webkit-input-placeholder {
     font-size: 12px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
@@ -75,7 +73,6 @@
   }
   .re-input input::-moz-placeholder {
     font-size: 12px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
@@ -84,7 +81,6 @@
   }
   .re-input input:-moz-placeholder {
     font-size: 12px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
@@ -93,7 +89,6 @@
   }
   .re-input input:-ms-input-placeholder {
     font-size: 12px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
