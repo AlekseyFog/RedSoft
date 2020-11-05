@@ -1,16 +1,12 @@
-import MODULE from './types';
-
 export default {
-  [MODULE.MUTATE_MOMENT_DATA]: (state, momentData) => {
-    state.momentData = momentData;
+  MUTATE_SLOTS: (state, slots) => {
+    state.slots = slots;
   },
-  [MODULE.MUTATE_STAT_DATA]: (state, statData) => {
-    state.statData = statData;
+  MUTATE_CART: (state, cart) => {
+    state.cart = cart;
+    localStorage.cart = cart;
   },
-  [MODULE.MUTATE_DEVICE_DATA]: (state, deviceData) => {
-    state.deviceData = deviceData;
-  },
-  [MODULE.MUTATE_SENSOR_DATA]: (state, sensorData) => {
-    state.sensorData = sensorData;
+  MUTATE_FILTER_STRING: (state, filterString) => {
+    state.filterString = filterString;
   },
 };

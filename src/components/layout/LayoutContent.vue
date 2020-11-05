@@ -1,6 +1,8 @@
 <template>
   <div class="layout-content">
-    <slot />
+    <div class="layout-content__wrapper">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -9,3 +11,11 @@
     name: 'LayoutContent',
   };
 </script>
+
+<style lang="scss" scoped>
+  .layout-content__wrapper {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+  }
+</style>

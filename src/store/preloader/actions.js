@@ -1,16 +1,15 @@
-import cloneDeep from 'lodash/cloneDeep';
-import MODULE from './types';
+const cloneArray = (arr) => ([...arr]);
 
 export default {
-  [MODULE.SHOW_PRELOADER]({ commit, state }, id) {
-    const list = cloneDeep(state.list);
+  SHOW_PRELOADER({ commit, state }, id) {
+    const list = cloneArray(state.list);
     list.push(id);
-    commit(MODULE.MUTATE_PRELOADER_LIST, list);
+    commit('MUTATE_PRELOADER_LIST', list);
   },
-  [MODULE.HIDE_PRELOADER]({ commit, state }, id) {
-    const list = cloneDeep(state.list);
+  HIDE_PRELOADER({ commit, state }, id) {
+    const list = cloneArray(state.list);
     const index = list.indexOf(id);
     list.splice(index, 1);
-    commit(MODULE.MUTATE_PRELOADER_LIST, list);
+    commit('MUTATE_PRELOADER_LIST', list);
   },
 };

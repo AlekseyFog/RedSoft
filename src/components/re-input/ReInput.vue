@@ -57,9 +57,8 @@
   .re-input label input {
     display: block;
     width: 100%;
-    font-size: 15px;
-    font-weight: 500;
-    color: $color-gray-04;
+    font-size: 11px;
+    color: $color-black-02;
     border: none;
     appearance: none;
     user-select: text;
